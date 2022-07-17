@@ -1,4 +1,4 @@
-import React, { lazy } from 'react'
+import React, { lazy, Suspense } from 'react'
 const HomePage = lazy(() => import('../Pages/Home/Home'));
 import {
     BrowserRouter,
@@ -12,23 +12,20 @@ import SideBar from '../../Components/SideBar/SideBar';
 const Router = () => {
 
   return (
-
-    <div >
-        <BrowserRouter>
-            <SideBar />
-            <Routes>
-                <Route
-                path="/home"
-                element={
-                <React.Suspense fallback={<>...</>}>
-                    <HomePage />
-                </React.Suspense>
-                }
-                />
-                <Route path="*" element={<HomePage />} />
-            </Routes>
-        </BrowserRouter>
-    </div>
+    <BrowserRouter>
+        <SideBar />
+        <Routes>
+            <Route
+            path="/home"
+            element={
+            <Suspense fallback={<>...</>}>
+                <HomePage />
+            </Suspense>
+            }
+            />
+            <Route path="*" element={<HomePage />} />
+        </Routes>
+    </BrowserRouter>
   )
 }
 
