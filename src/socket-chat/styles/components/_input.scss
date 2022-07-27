@@ -1,0 +1,49 @@
+.aut__title {
+    margin-left: 25px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+.input__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 40px;
+    background: #fff;
+    margin: 10px 20px;
+    position: relative;
+    border-radius: 10px;
+
+    input{
+        border: none;
+        border-radius: 10px;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        padding-left: 45px;
+        font-weight: 500;
+        font-size: 15px;
+
+        &:focus{
+            outline: none;
+        }
+    }
+    img{
+        z-index: 3;
+        width: 20px;
+        margin-top: 10px;
+        height: 20px;
+    }
+    .icono {
+        margin-left: 10px;
+    }
+    .view {
+        z-index: 3;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+    }
+    
+    
+}

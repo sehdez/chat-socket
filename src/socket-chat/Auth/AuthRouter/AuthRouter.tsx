@@ -7,9 +7,11 @@ import {
   } from "react-router-dom";
 
 import SideBar from '../../Components/SideBar/SideBar';
+interface LoginProps{
+  setAuth: Function;
+}
 
-
-const Router = () => {
+const Router = ({setAuth}: LoginProps) => {
 
   return (
     <BrowserRouter>
